@@ -1,7 +1,14 @@
 <template>
-    <h1>This is the home page</h1>>
+  <default-dashboard />
 </template>
 
-<script setup>
-    
+<script>
+import DefaultDashboard from "@/views/dashboards/Default.vue";
+
+export default {
+  name: "HomePage",
+  components: {
+    DefaultDashboard,
+  },
+};
 </script>
