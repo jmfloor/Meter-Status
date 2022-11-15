@@ -7,7 +7,7 @@
     "start": "npx http-server -P http://127.0.0.1:${PORT} ./dist",
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --port 8080",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore --fix src",
     "format": "prettier .  --write"
   },
