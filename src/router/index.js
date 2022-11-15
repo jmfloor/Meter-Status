@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from "vue-router";
 import Dashboard from "@/views/Dashboard.vue";
 import Report from "@/views/Report.vue";
+import Meter from "@/views/Meter.vue";
 import Tables from "@/views/Tables.vue";
 import Billing from "@/views/Billing.vue";
 import VirtualReality from "@/views/VirtualReality.vue";
@@ -19,6 +20,12 @@ const routes = [
     path: "/dashboard",
     name: "Dashboard",
     component: Dashboard,
+  },
+  {
+    path: "/meter/:id",
+    name: "Meter",
+    component: Meter,
+    props: true,
   },
   {
     path: "/report",
