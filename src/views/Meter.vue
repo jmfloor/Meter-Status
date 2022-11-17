@@ -170,7 +170,7 @@ export default {
         // console.log(response.data)
       } catch (error) {
         console.log(error);
-        window.location.href = '#/';
+        window.location.href = '/';
       }
       console.log(this.meterData.data)
     },
