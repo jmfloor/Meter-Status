@@ -1,73 +1,23 @@
 import { createRouter, createWebHashHistory } from "vue-router";
-import Dashboard from "@/views/Dashboard.vue";
-import Report from "@/views/Report.vue";
 import Meter from "@/views/Meter.vue";
-import Tables from "@/views/Tables.vue";
-import Billing from "@/views/Billing.vue";
-import VirtualReality from "@/views/VirtualReality.vue";
-import Profile from "@/views/Profile.vue";
-import Rtl from "@/views/Rtl.vue";
-import SignIn from "@/views/SignIn.vue";
-import SignUp from "@/views/SignUp.vue";
+import Home from "@/views/Home.vue";
 
 const routes = [
   {
     path: "/",
     name: "/",
-    redirect: "/dashboard",
-  },
-  {
-    path: "/dashboard",
-    name: "Dashboard",
-    component: Dashboard,
+    // redirect: "/home",
+    component: Home,
+    meta: { title: 'Rayz Meter Dashboard' },
   },
   {
     path: "/meter/:id",
     name: "Meter",
     component: Meter,
+    meta: { title: 'Meter' },
     props: true,
   },
-  {
-    path: "/report",
-    name: "Report",
-    component: Report,
-    props: true,
-  },
-  {
-    path: "/tables",
-    name: "Tables",
-    component: Tables,
-  },
-  {
-    path: "/billing",
-    name: "Billing",
-    component: Billing,
-  },
-  {
-    path: "/virtual-reality",
-    name: "Virtual Reality",
-    component: VirtualReality,
-  },
-  {
-    path: "/profile",
-    name: "Profile",
-    component: Profile,
-  },
-  {
-    path: "/rtl-page",
-    name: "Rtl",
-    component: Rtl,
-  },
-  {
-    path: "/sign-in",
-    name: "Sign In",
-    component: SignIn,
-  },
-  {
-    path: "/sign-up",
-    name: "Sign Up",
-    component: SignUp,
-  },
+  
 ];
 
 const router = createRouter({
@@ -77,3 +27,9 @@ const router = createRouter({
 });
 
 export default router;
+
+router.beforeEach((to, from, next) => {
+  console.log(to);
+  document.title = to.meta.title;
+  next();
+});

@@ -94,7 +94,7 @@
           <div class="card-body">
             <form role="form">
               <div class="mb-3">
-                <vsud-input type="text" placeholder="Name" aria-label="Name" />
+                <vsud-input type="text" placeholder="Name" aria-label="Jou-Naame" />
               </div>
               <div class="mb-3">
                 <vsud-input type="email" placeholder="Email" aria-label="Email" />

@@ -107,16 +107,16 @@
               </g>
             </svg>
           </div>
-          <p class="mt-1 mb-0 text-xs font-weight-bold">Clicks</p>
+          <p class="mt-1 mb-0 text-xs font-weight-bold">Clicks_2</p>
         </div>
         <h4 class="font-weight-bolder">2m</h4>
         <div class="progress w-75">
           <div
             class="progress-bar bg-dark w-90"
             role="progressbar"
-            aria-valuenow="90"
+            aria-valuenow="10"
             aria-valuemin="0"
-            aria-valuemax="100"
+            aria-valuemax="1000"
           ></div>
         </div>
       </div>
@@ -272,11 +272,9 @@ export default {
               'Access-Control-Allow-Origin': '*',
               'authorizationToken': '584abbe0928f4ba684e52118fdebc41d'
             }
-
           }
           const response = await axios(config);
           // JSON responses are automatically parsed.
-          // this.meterData = response.data;
           this.chartData = response.data;
           console.log(this.barChartLabels)
           // console.log(response.data)
@@ -358,6 +356,7 @@ export default {
 
   mounted() {
     this.getChartData();
+
     // this.renderBarChart();
   },
   watch: {

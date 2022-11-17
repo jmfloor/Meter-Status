@@ -10,20 +10,24 @@
         class="form-control"
         :class="getClasses(size, valid)"
         :name="name"
+        :value="value"
         :placeholder="placeholder"
         :isRequired="isRequired"
-        
+        @input="event => text = event.target.value"
       />
       <span v-if="iconDir === 'right'" class="input-group-text">
         <i :class="getIcon(icon)"></i>
-      </span>     
+      </span>
+      <p>input: {{ text }}</p>
+      
+      
     </div>
   </div>
 </template>
 
 <script>
-
-
+import { ref } from "vue";
+const text = ref('')
 export default {
   name: "VsudInput",
   props: {
@@ -65,21 +69,6 @@ export default {
     },
     isRequired: Boolean,
   },
-  data() {
-    return {
-      
-      inputText: '',
-    }
-  },
-  watch: {
-    inputText: {
-      handler: function(newValue, oldValue) {
-        this.$emit('input', newValue)
-      },
-      deep: true,
-    }
-  },
-  
   methods: {
     getClasses: (size, valid) => {
       let sizeValue, isValidValue;
