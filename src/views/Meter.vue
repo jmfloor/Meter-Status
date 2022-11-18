@@ -77,7 +77,7 @@
       </div> -->
       <div class="text-center">
         <a
-          href="@"
+          href=""
           class="text-muted text-center"
           ><b>Return</b>
         </a>
@@ -172,7 +172,6 @@ export default {
         console.log(error);
         window.location.href = '/';
       }
-      console.log(this.meterData.data)
     },
   },
 

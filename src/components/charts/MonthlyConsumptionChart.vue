@@ -276,12 +276,9 @@ export default {
           const response = await axios(config);
           // JSON responses are automatically parsed.
           this.chartData = response.data;
-          console.log(this.barChartLabels)
-          // console.log(response.data)
         } catch (error) {
           console.log(error);
         }
-        // console.log(this.meterData)
         this.renderBarChart();
       },
     renderBarChart() {

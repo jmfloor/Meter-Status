@@ -4,8 +4,8 @@ import Home from "@/views/Home.vue";
 
 const routes = [
   {
-    path: "/",
-    name: "/",
+    path: "",
+    name: "",
     // redirect: "/home",
     component: Home,
     meta: { title: 'Rayz Meter Dashboard' },
@@ -29,7 +29,6 @@ const router = createRouter({
 export default router;
 
 router.beforeEach((to, from, next) => {
-  console.log(to);
   document.title = to.meta.title;
   next();
 });
