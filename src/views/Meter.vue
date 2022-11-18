@@ -2,7 +2,7 @@
   <!-- <div class="pt-5 m-3 align-items-start min-vh-5 pb-11 border-radius-lg" 
     style='background-image: url("../src/assets/img/galaxy_bg.png"); height:35px'> -->
   <div>
-  <div class="container m-5">
+  <div class="container my-5 mx-auto justify-content-center">
     <div class="row mb-3 justify-content-center">
       <div class="col-12 col-md-8">
         <SiteInfoCard
