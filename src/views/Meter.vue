@@ -50,17 +50,17 @@
       </div>
     </div>
     <!-- chart -->
-    <!-- <div class="mt-4 row">
-      <div class="mb-4 col-lg-5 mb-lg-0">
+    <div class="mt-4 row justify-content-center">
+      <div class="mb-4 col-lg-9 mb-lg-0">
         <div class="card z-index-2">
-          <div class="p-3 card-body">
+          <div>
             <monthly-consumption-chart
               :customerCode="meterId"
             />
           </div>
         </div>
       </div>
-    </div> -->
+    </div>
     
 
     
