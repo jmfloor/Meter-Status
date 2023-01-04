@@ -47,10 +47,11 @@
                 <p class="text-sm mt-3 mb-0">
                   What is my code?
                   <a
-                    href="javascript:;"
+                    href="https://zfrmz.com/7T6PA4NMCEA5sxROerdt"
                     class="text-dark font-weight-bolder"
-                  >Contact Us</a>
+                  > Contact Us</a>
                 </p>
+                <p style="font-size:xx-small">Find your customer code on your statement from Enova</p>
               </form>
             </div>
           </div>

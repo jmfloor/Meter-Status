@@ -15,14 +15,17 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import store from "./store";
 import router from "./router";
+import VueGtag from 'vue-gtag';
 
 import "./assets/css/nucleo-icons.css";
 import "./assets/css/nucleo-svg.css";
 import SoftUIDashboard from "./soft-ui-dashboard";
 
-
 createApp(App)
     .use(store)
     .use(router)
     .use(SoftUIDashboard)
+    .use(VueGtag, {
+            config: { id: 'G-6B12LV40P7' }
+          })
     .mount('#app')
