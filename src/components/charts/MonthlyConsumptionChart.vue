@@ -86,6 +86,7 @@ export default {
     },
     renderBarChart() {
       var ctx = document.getElementById("chart-bars").getContext("2d");
+      
       new Chart(ctx, {
         type: "bar",
         data: {
@@ -98,9 +99,9 @@ export default {
               borderRadius: 4,
               borderSkipped: false,
               backgroundColor: "#fff",
-              data: this.barChartData.import,
+              data: this.barChartData.import.map((num, index) => num - this.barChartData.export[index]),
               maxBarThickness: 10,
-            },
+            }
           ],
         },
         options: {
